@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling>=1.26,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "engcalcs-as1170"
+version = "0.1.0"
+description = "Clause-traced Australian structural actions calculations for EngCalcs."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "AGPL-3.0-only"
+dependencies = ["jsonschema>=4.22,<5"]
+
+[project.urls]
+Repository = "https://github.com/Elandu/OpenCalcs-AS1170"
+Issues = "https://github.com/Elandu/OpenCalcs-AS1170/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3,<9", "ruff>=0.11,<1", "build>=1.2,<2"]
+
+[project.entry-points."engcalcs.plugins"]
+as1170 = "engcalcs_as1170.plugin:get_plugin"
+
+[project.entry-points."opencalcs.plugins"]
+as1170 = "opencalcs_as1170.plugin:get_plugin"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/engcalcs_as1170", "src/opencalcs_as1170"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

@@ -1,0 +1,14 @@
+{
+  "calculation_id": "structural.as1170.part1.floor_action",
+  "inputs": {
+    "row_id": "B_OFFICE",
+    "supported_area_m2": 25.0
+  },
+  "expected_summary": {
+    "characteristic_uniform_action_kpa": 3.0,
+    "area_reduction_factor_psi_a": 0.9,
+    "reduced_uniform_action_kpa": 2.7,
+    "concentrated_action_kn": 2.7
+  },
+  "example_kind": "independent numerical fixture, not a published worked example"
+}

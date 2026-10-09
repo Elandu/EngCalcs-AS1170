@@ -1,0 +1,28 @@
+{
+  "kind": "independent numerical fixtures",
+  "basis": {
+    "part_0": "AS/NZS 1170.0:2002 incorporating Amendments 1-5",
+    "part_1": "AS/NZS 1170.1:2002 incorporating Amendments 1-2"
+  },
+  "cases": [
+    {
+      "name": "Office floor area reduction",
+      "reference": "AS/NZS 1170.1 Table 3.1 and Clause 3.4.2",
+      "inputs": {"row_id": "B_OFFICE", "supported_area_m2": 25.0},
+      "expected": {"characteristic_uniform_action_kpa": 3.0, "area_reduction_factor_psi_a": 0.9, "reduced_uniform_action_kpa": 2.7, "concentrated_action_kn": 2.7}
+    },
+    {
+      "name": "Strength combination with office imposed action",
+      "reference": "AS/NZS 1170.0 Clauses 4.2.2 and Table 4.1",
+      "inputs": {"situation": "strength", "occupancy": "office", "imposed_action_kind": "distributed_floor", "action_effects": {"G": 4.0, "Q": 3.0}},
+      "expected_case": {"id": "strength_permanent_imposed", "action_effect": 9.3}
+    },
+    {
+      "name": "Static liquid pressure on a four metre wall",
+      "reference": "AS/NZS 1170.1 Clause 4.2",
+      "inputs": {"liquid_depth_m": 4.0, "unit_weight_kn_m3": 10.0, "wall_width_m": 2.0},
+      "expected": {"base_pressure_kpa": 40.0, "resultant_action_kn": 160.0, "resultant_height_above_base_m": 1.3333333333333333}
+    }
+  ],
+  "note": "These are independent calculations from current standard table values and mechanics; they are not published worked examples from the Standards."
+}
