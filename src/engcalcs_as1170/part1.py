@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+
 """AS/NZS 1170.1 permanent, imposed and other action calculations."""
 
 from __future__ import annotations

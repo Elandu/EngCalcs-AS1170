@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+
 """AS/NZS 1170.0 action combinations and minimum robustness actions."""
 
 from __future__ import annotations

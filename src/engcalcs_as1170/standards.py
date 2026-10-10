@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+
 """Edition and clause provenance for supported AS/NZS 1170 calculations."""
 
 from __future__ import annotations

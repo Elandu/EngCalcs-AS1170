@@ -35,3 +35,7 @@ python -m build
 ```
 
 Python 3.12 or later is required.
+
+## Licence and compatibility
+
+Current original code is licensed under AGPL-3.0-only; see `LICENSE`. Existing `opencalcs` import paths and entry points are compatibility adapters.

@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+
 """Input validation shared by the calculation families."""
 
 from __future__ import annotations

@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+
 """Compatibility import for ``opencalcs_as1170.part1``."""
 
 import sys as _sys

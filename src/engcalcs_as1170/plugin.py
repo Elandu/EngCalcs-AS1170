@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+
 """Installed EngCalcs plugin descriptors for the AS/NZS 1170 action calculations."""
 
 from __future__ import annotations
@@ -235,7 +237,7 @@ class AS1170Plugin:
     version: str = __version__
     revision: str | None = None
     license: str = "AGPL-3.0-only"
-    source: str = "https://github.com/Elandu/OpenCalcs-AS1170"
+    source: str = "https://github.com/Elandu/EngCalcs-AS1170"
     calculations: tuple[Calculation, ...] = field(default_factory=_calculations)
 
     def descriptor(self) -> dict[str, Any]:
