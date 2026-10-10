@@ -1,1 +1,1 @@
-"""Check the packaged plugin integration with the pinned host."""
+"""Check the installed AS1170 wheel with an immutable EngCalcs host."""
