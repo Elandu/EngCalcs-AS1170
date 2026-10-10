@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: LicenseRef-EngCalcs-Proprietary
+
 """AS/NZS 1170.1 permanent, imposed and other action calculations."""
 
 from __future__ import annotations

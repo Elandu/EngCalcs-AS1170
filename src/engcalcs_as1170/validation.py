@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: LicenseRef-EngCalcs-Proprietary
+
 """Input validation shared by the calculation families."""
 
 from __future__ import annotations
