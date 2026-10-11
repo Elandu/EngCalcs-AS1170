@@ -43,7 +43,10 @@ def verify_wheel() -> None:
     assert all(plugin.id == "structural.as1170" for plugin in plugins)
     descriptors = [plugin.descriptor() for plugin in plugins]
     assert all(len(plugin.calculations) == 16 for plugin in plugins)
-    assert all(descriptor["license"] == "AGPL-3.0-only" for descriptor in descriptors)
+    assert all(
+        descriptor["license"] == "AGPL-3.0-only"
+        for descriptor in descriptors
+    )
     assert {item["id"] for item in descriptors[0]["calculations"]} == {
         item["id"] for item in descriptors[1]["calculations"]
     }
@@ -59,11 +62,10 @@ def verify_wheel() -> None:
 
 
 def verify_host() -> None:
-    from fastapi.testclient import TestClient
-
     from engcalcs.api import create_app
     from engcalcs.auth import AllowAllAuthenticator
     from engcalcs.registry import CalculationRegistry
+    from fastapi.testclient import TestClient
 
     registry = CalculationRegistry()
     assert any(plugin.id == "structural.as1170" for plugin in registry.plugins)
